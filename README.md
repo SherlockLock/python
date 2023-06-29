@@ -15,11 +15,11 @@ This is a folder containing misc files playing with concepts or new libraries.
 
 ## TODO
 
-foundation/Data Types/tuples.py
-foundation/Data Types/range.py
-foundation/Data Types/dictionary.py
-foundation/Data Types/date.py
-foundation/Data Types/json.py
+foundation/Data_Types/tuples.py
+foundation/Data_Types/range.py
+foundation/Data_Types/dictionary.py
+foundation/Data_Types/date.py
+foundation/Data_Types/json.py
 
 foundation/Functions/functions.py
 foundation/Functions/lambdas.py
@@ -30,9 +30,9 @@ foundation/Objects/Inheritance.py
 foundation/Objects/polymorphism.py
 foundation/Objects/scope.py
 
-foundation/Control Flow/if_else.py
-foundation/Control Flow/while.py
-foundation/Control Flow/for.py
+foundation/Control_Flow/if_else.py
+foundation/Control_Flow/while.py
+foundation/Control_Flow/for.py
 
 foundation/misc/iterators.py
 foundation/misc/math.py
