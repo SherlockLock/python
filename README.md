@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a repository of python code I have written to play with and expand my skills with python.
+This is a repository of code I have written to play with and expand my skills with python.
 
 
 ## foundation
