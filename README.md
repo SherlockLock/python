@@ -5,9 +5,13 @@
 This is a repository of code I have written to play with and expand my skills with python.
 
 
-## foundation
+## Foundation
 
 This is a folder containing files related to core concepts of the python programming language
+
+## Machine_Learning
+
+This folder contains files implementing various ML concepts
 
 ## playgrounds
 
