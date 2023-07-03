@@ -13,7 +13,7 @@ This is a folder containing files related to core concepts of the python program
 
 This folder contains files implementing various ML concepts
 
-## playgrounds
+## Playgrounds
 
 This is a folder containing misc files playing with concepts or new libraries.
 
@@ -53,7 +53,6 @@ foundation/files/delete.py
 
 foundation/http/requests.py
 
-foundation/modules/numpy.py
 foundation/modules/pandas.py
 foundation/modules/scipy.py
 foundation/modules/django.py
