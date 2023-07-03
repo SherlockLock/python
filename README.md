@@ -28,15 +28,9 @@ foundation/Data_Types/json.py
 foundation/Functions/functions.py
 foundation/Functions/lambdas.py
 
-foundation/Objects/classes.py
-foundation/Objects/structs.py
-foundation/Objects/Inheritance.py
-foundation/Objects/polymorphism.py
+foundation/Objects/abstraction.py
+foundation/Objects/encapsulation.py
 foundation/Objects/scope.py
-
-foundation/Control_Flow/if_else.py
-foundation/Control_Flow/while.py
-foundation/Control_Flow/for.py
 
 foundation/misc/iterators.py
 foundation/misc/math.py
@@ -56,7 +50,6 @@ foundation/http/requests.py
 foundation/modules/pandas.py
 foundation/modules/scipy.py
 foundation/modules/django.py
-foundation/modules/matplotlib.py
 
 foundation/databases/mongo/config.py
 foundation/databases/mongo/create_db.py
