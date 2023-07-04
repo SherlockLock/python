@@ -19,8 +19,7 @@ This is a folder containing misc files playing with concepts or new libraries.
 
 ## TODO
 
-foundation/Data_Types/tuples.py
-foundation/Data_Types/range.py
+foundation/Data_Types/sets.py
 foundation/Data_Types/dictionary.py
 foundation/Data_Types/date.py
 foundation/Data_Types/json.py
@@ -40,10 +39,8 @@ foundation/misc/pip.py
 foundation/misc/errors.py
 foundation/misc/input.py
 
-foundation/files/file_handling.py
-foundation/files/read.py
+foundation/files/create.py
 foundation/files/write.py
-foundation/files/delete.py
 
 foundation/http/requests.py
 
