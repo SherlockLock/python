@@ -1,5 +1,5 @@
 """
-This file contains a simple implementation for gradient descent
+This file is a simple implementation for gradient descent
 to calculate the best parameters for a univariate linear
 regression model.
 
@@ -207,7 +207,6 @@ def run_gradient_descent(x_values, y_values, m_init, b_init, alpha, iterations):
     described in the method sqrd_error_cost_function by updating the values of 
     m and b.
 
-
     Returns:
         _type_: _description_
     """
@@ -240,6 +239,9 @@ alpha = 0.01        #Learning Rate
 iterations = 100    #Number of Gradient Descent Iterations
 m_init = 0          #Initial Value for slope
 b_init = 0          #Initial Value for y-intercept
+
+
+######### RUN #########################
 
 #Plot Training Data
 plt.scatter(x_train, y_train, marker='o', c='k', label="Training Data")
