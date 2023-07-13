@@ -24,12 +24,8 @@ foundation/Data_Types/dictionary.py
 foundation/Data_Types/date.py
 foundation/Data_Types/json.py
 
-foundation/Functions/functions.py
-foundation/Functions/lambdas.py
-
 foundation/Objects/abstraction.py
 foundation/Objects/encapsulation.py
-foundation/Objects/scope.py
 
 foundation/misc/iterators.py
 foundation/misc/math.py
