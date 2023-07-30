@@ -188,17 +188,17 @@ print("-------------------------------------------")
 print(f"Found weights:\t{weights}")
 print(f"Found constant:\t{constant}")
 
-print("\n*******************************************\n\n")
+# print("\n*******************************************\n\n")
 
-print(f"Comparing found weights to training data\n")
+# print(f"Comparing found weights to training data\n")
 
-for i in range(2):
-    data_set = np.random.randint(0, features.shape[0])
-    print(f"For feature with data: {features[data_set]}")
-    print(f"\tTarget Value\t\t{targets[data_set]}")
-    print(f"\tModel Prediction\t{model(features[data_set], weights, constant)}\n")
+# for i in range(2):
+#     data_set = np.random.randint(0, features.shape[0])
+#     print(f"For feature with data: {features[data_set]}")
+#     print(f"\tTarget Value\t\t{targets[data_set]}")
+#     print(f"\tModel Prediction\t{model(features[data_set], weights, constant)}\n")
 
-print("\n*******************************************\n\n")
+# print("\n*******************************************\n\n")
 
 # sqft = 700
 # bed = 1

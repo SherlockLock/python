@@ -19,10 +19,7 @@ This is a folder containing misc files playing with concepts or new libraries.
 
 ## TODO
 
-foundation/Data_Types/sets.py
 foundation/Data_Types/dictionary.py
-foundation/Data_Types/date.py
-foundation/Data_Types/json.py
 
 foundation/Objects/abstraction.py
 foundation/Objects/encapsulation.py
