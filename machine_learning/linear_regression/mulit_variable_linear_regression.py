@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 ######### FUNCTIONS ###################
 
-def loadTrainingSet(path):
+def load_training_set(path):
     """
     TODO: 
     
@@ -110,6 +110,46 @@ def model(inputs, weights, constant):
 
 #     return ( 1 / m ) * sum
 
+def sqrd_error_cost_function(features, targets, weights, constant):
+    """
+    This function is our implementation of the squared error cost function.
+    
+    For this example, the function is as follows:
+    
+    J(m,b) = (1 / 2n) * (from 1 to n) ∑ (f(x_i) - y_i) ^ 2
+    
+    Where:
+    
+    J(m,b)  : is the cost of the function used with the parameters m and b
+    m & b   : are the parameters being tested for the cost function
+    n       : is the total number of values in the training set
+    i       : is the training set number being evaluated
+    x_i     : is the ith value in the x value set
+    y_i     : is the ith value in the y values set
+    f(x_i)  : is our model function being evaluated with x_i
+
+    Args:
+        features (np.array): training set for x values
+        targets (np.array): training set for y values
+        weights (number): weights being tested
+        constant (number): constant being tested
+
+    Returns:
+        J(m,b) (number): represention of the cost of the function with the chosen parameter values
+    """
+    
+    #Initalize local parameters
+    j = 0 # intial value of J(m,b)
+    n = len(features) 
+    
+    for i in range(n):
+        x_i = features[i]
+        y_i = targets[i]
+        f_x_i = model(x_i , weights, constant)
+        
+        j += (f_x_i - y_i) ** 2
+        
+    return (1 / (2 * n)) * j
 
 def compute_gradient_descent(features, targets, weights, constant):
     
@@ -139,6 +179,7 @@ def run(features, targets, weights_init, constant_init, alpha, iterations):
     
     weights = copy.deepcopy(weights_init)
     constant = constant_init
+    history = []
     
     for _ in range(iterations):
         w_grad, con_grad = compute_gradient_descent(features, targets, weights, constant)
@@ -147,19 +188,21 @@ def run(features, targets, weights_init, constant_init, alpha, iterations):
         tmp_con = constant - (alpha * con_grad)
         weights = tmp_w
         constant = tmp_con
+        
+        history.append(sqrd_error_cost_function(features, targets, w_grad, con_grad))
     
-    return weights, constant
+    return weights, constant, history
         
 
 ######### MODEL PARAMETERS ############
  
  #Path to training data
-# path = "Machine_Learning/linear_regression/data/apts_data_1.txt"
-path = "Machine_Learning/linear_regression/data/test.txt"
+path = "Machine_Learning/linear_regression/data/apts_data_1.txt"
+# path = "Machine_Learning/linear_regression/data/test.txt"
     
 #Gradient Descent Parameters
 alpha = 5e-7                        #Learning Rate
-iterations = 1000                   #Number of Gradient Descent Iterations
+iterations = 10                   #Number of Gradient Descent Iterations
 weights_init = [1,1,1,1]            #Initial value for slope
 constant_init = 0                   #Initial value for the constant 
 
@@ -170,7 +213,7 @@ constant_init = 0                   #Initial value for the constant
 print("\n*******************************************\n")
 
 print(f"Loading Training Data from {path}")
-features, targets = loadTrainingSet(path)
+features, targets = load_training_set(path)
 # print(f"Found features:\t{features}")
 # print(f"Found targets:\t{targets}")
 
@@ -181,14 +224,20 @@ print(f"weights_init:\t{weights_init}")
 print(f"constant_init:\t{constant_init}")
 print(f"alpha:\t\t{alpha}")
 print(f"iterations:\t{iterations}")
-weights, constant = run(features, targets, weights_init, constant_init, alpha, iterations)
+weights, constant, cost_history = run(features, targets, weights_init, constant_init, alpha, iterations)
 
 print("-------------------------------------------")
 
 print(f"Found weights:\t{weights}")
 print(f"Found constant:\t{constant}")
 
-# print("\n*******************************************\n\n")
+print("\n*******************************************\n\n")
+
+plt.plot(cost_history)
+plt.title("Cost History")
+plt.ylabel("Cost")
+plt.xlabel("Iteration #")
+plt.show()
 
 # print(f"Comparing found weights to training data\n")
 
